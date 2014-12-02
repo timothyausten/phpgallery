@@ -1,0 +1,64 @@
+body {
+    color: #585041;
+    background-color: #f0f0e0;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+    height: 100;
+}
+header, section {
+    max-width: 846px;
+    margin: 0 auto;
+}
+.headerH1 {
+    font-size: 6vw;
+    letter-spacing: 0.5em;
+    font-weight: 100;
+    padding-top:3%;
+    padding-bottom: 0%;
+    margin-top: 0;
+}
+.headerH2 {
+    font-size:      4vw;
+    letter-spacing: 0.5em;
+    font-weight:    100;
+    line-height:    2em;
+    padding-top:    0%;
+    padding-bottom: 3%
+}
+img {
+    border: 1px #585041 solid;
+}
+.floatLeft {
+    float: left;
+}
+.floatRight {
+    float: right;
+}
+.clearBoth {
+    clear: both;
+}
+
+/* For the last letter in a centered line of text that has extra letter spacing */
+.ls0 { letter-spacing: 0 }
+
+/* unvisited link */
+a:link {
+    color: #585041;
+}
+
+/* visited link */
+a:visited {
+    color: gray;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
