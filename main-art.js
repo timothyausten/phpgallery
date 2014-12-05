@@ -28,7 +28,7 @@ $(function () {
     console.log(fileListPhp);
     // var fileList = fileListPhp;
     var fileList = undefined;
-    var dir = 'paintings/autogallery';
+    var dir = 'paintings/autogallery/';
     var fileextension = '.jpg';
     var galleryContainer = 'galleryId';
     var maxwidth;
