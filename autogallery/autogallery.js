@@ -294,8 +294,10 @@ function autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidt
             };
 
             // bookmark
-            dimensions = new EstimatedHeight(galleryContainer);
-            dimensions.resize;
+            setTimeout(function() {
+                dimensions = new EstimatedHeight(galleryContainer);
+                dimensions.resize;
+            }, 1000);
         }    
     });
 
