@@ -15,7 +15,7 @@
         <header>
             <div class="headerTextWidth">
                 <h1 class="headerH1">TIMOTHY&nbsp;AUSTE<span class="ls0">N</span></h1>
-                <h2 class="headerH2">Painting<span class="ls0">g</span></h2>
+                <h2 class="headerH2">Paintin<span class="ls0">g</span></h2>
             </div>
         </header>
 
@@ -31,6 +31,6 @@
         <?PHP include 'getfilelist.php'; ?>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="autogallery/autogallery.js"></script>
-        <script src="main.js"></script>
+        <script src="main-art.js"></script>
     </body>
 </html>
