@@ -26,6 +26,7 @@
                 <a href="http://www.riikkaausten.com">riikka austen photography</a> | 
                 <a href="https://www.facebook.com/timothyausten">facebook</a> | 
                 <a href="/art.php">painting</a> | 
+                <a href="/timestable.htm">multiplication table</a> | 
                 <a href="https://www.linkedin.com/in/timothyausten">linkedin</a>
             </div>
         </section>
