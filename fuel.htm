@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Timothy Austen Expat Tax Prep - Currency &amp; Volume Fuel Price Converter</title>
+        <meta name=description content="Currency and Volume Fuel Price Converter">
+        <meta name=keywords content="converter, fuel, gallons, liters, eur, usd"> 
+        <meta name="revisit after" content="15 days">
+        <meta name=ROBOTS content=all>
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="headerTextWidth">
+                <h1 class="headerH1" style="font-size: 2em">Timothy Austen</h1>
+                <h2>Conversion of Euros/Liter to U.S. Dollars/Gallon</h2>
+            </div>
+        </header>
+
+        <div style="width:20em;margin:0 auto">
+            <form action="javascript:void(calc())">
+                <p style="text-align:right">
+                    EUR/L: <input id="eurLiter" type="text" value="1.49"><br />
+                    USD/EUR: <input id="eurUsd" type="text" value="1.19"></p>
+                <p style="text-align:center"><input type="submit" value="Calculate"></p>
+            </form>
+        </div>
+        
+        <script>
+            function calc() {
+                var eurUsd = Number(document.getElementById('eurUsd').value),
+                    galLiter = 3.78541,
+                    eurLiter = Number(document.getElementById('eurLiter').value),
+                    usdGal = (eurUsd * galLiter / eurLiter).toFixed(2),
+                    a = document.createElement('p');
+
+                document.body.appendChild(a);
+                a.innerHTML = eurLiter + ' EUR/Liter ' + ' at ' + eurUsd + ' USD/EUR = ' + usdGal + ' USD/Gallon'
+            }
+            calc();
+        </script>
+    </body>
+</html>

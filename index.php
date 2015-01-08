@@ -27,6 +27,7 @@
                 <a href="https://www.facebook.com/timothyausten">facebook</a> | 
                 <a href="/art.php">painting</a> | 
                 <a href="/timestable.htm">multiplication table</a> | 
+                <a href="/timestable.htm">eur/liter to usd/gallon conversion</a> | 
                 <a href="https://www.linkedin.com/in/timothyausten">linkedin</a>
             </div>
         </section>
