@@ -1,7 +1,10 @@
 /*global $, alert, autogalleryfunc*/
 /*jslint plusplus: true */
 
+
 // Resize header
+// Not used anymore because header text is in svg
+/*
 function reSize() {
     'use strict';
     //var size = $(window).width()/100,
@@ -16,14 +19,19 @@ function reSize() {
         hh2 = '4vw';
     }
     //$('.headerH1').css('font-size', hh1);
+    
     document.getElementsByClassName('headerH1')[0].style.fontSize = hh1;
     document.getElementsByClassName('headerH2')[0].style.fontSize = hh2;
 }
 reSize();
+
 $(function () {
     $(window).resize(reSize);
 });
+*/
 
+
+//launch autogallery
 $(function () {
     console.log(fileListPhp);
     // var fileList = fileListPhp;

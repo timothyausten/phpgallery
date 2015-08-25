@@ -7,22 +7,29 @@ body {
     width: 100%;
     height: 100;
 }
-header, section {
+header {
+    width:80%;
     max-width: 846px;
     margin: 0 auto;
 }
+section {
+    max-width: 846px;
+    margin: 0 auto;
+}
+h1, h2 {
+    font-weight:100;
+    font-family:'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    letter-spacing:0.5em;
+    fill:#585041;
+}
 .headerH1 {
     font-size: 6vw;
-    letter-spacing: 0.5em;
-    font-weight: 100;
     padding-top:3%;
     padding-bottom: 0%;
     margin-top: 0;
 }
 .headerH2 {
     font-size:      4vw;
-    letter-spacing: 0.5em;
-    font-weight:    100;
     line-height:    2em;
     padding-top:    0%;
     padding-bottom: 3%

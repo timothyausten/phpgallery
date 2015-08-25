@@ -4,7 +4,7 @@
     <head>
         <title>Timothy Austen Expatriate Taxation</title>
         <meta name=description content="U.S. expatriate and international taxation">
-        <meta name=keywords content="timothy austen, painting, illustration, web development"> 
+        <meta name=keywords content="timothy austen, painting, illustration, web development, tax preparation, expatirates"> 
         <meta name="revisit after" content="15 days">
         <meta name=ROBOTS content=all>
         <meta name="viewport" content="width=device-width, user-scalable=yes">
@@ -13,21 +13,30 @@
 
     <body>
         <header>
-            <div class="headerTextWidth">
-                <h1 class="headerH1">TIMOTHY&nbsp;AUSTE<span class="ls0">N</span></h1>
-                <h2 class="headerH2">Expatriate taxatio<span class="ls0">n</span></h2>
+            <object data="banner.svg" type="image/svg+xml" style="display:inline-block;float:left;white-space:nowrap;width:100%;padding:3% 3% 0 0"></object>
+            
+            <!--
+            <div class="headerTextWidth" style="display:inline-block;float:left;white-space:nowrap">
+				<h1 class="headerH1">TIMOTHY AUSTEN</h1>
+				<h2 class="headerH2">Expatriate taxation</h2>
             </div>
+            -->
+            
+            <div style="clear:both;"></div>
+            <h2 style="margin-top:0">Expatriate taxation</h2>
         </header>
 
         <div id="galleryId"></div>
 
         <section>
-            <div style="font-size:1em;text-align:center;padding-top:3%">
+            <div style="font-size:1em;text-align:center;padding:3% 3% 0 3%">
                 <a href="http://www.riikkaausten.com">riikka austen photography</a> | 
-                <a href="https://www.facebook.com/timothyausten">facebook</a> | 
-                <a href="/art.php">painting</a> | 
-                <a href="/timestable.htm">multiplication table</a> | 
-                <a href="/fuel.htm">eur/liter to usd/gallon conversion</a> | 
+                <a href="http://www.facebook.com/expatriatetaxation">facebook</a> | 
+                <a href="/art/index.php">painting</a> | 
+                <a href="/selfemploymenttax">expatriates &amp; the self-employment tax</a> | 
+                <a href="/timestable/timestable.htm">multiplication table</a> | 
+                <a href="/fuel/fuel.htm">eur/liter to usd/gallon conversion</a> | 
+                <a href="/pizza/pizza.htm">pizza real estate calculator</a> | 
                 <a href="https://www.linkedin.com/in/timothyausten">linkedin</a>
             </div>
         </section>
