@@ -32,11 +32,11 @@
             <div style="font-size:1em;text-align:center;padding:3% 3% 0 3%">
                 <a href="http://www.riikkaausten.com">riikka austen photography</a> | 
                 <a href="http://www.facebook.com/expatriatetaxation">facebook</a> | 
-                <a href="/art/index.php">painting</a> | 
+                <a href="/art">painting</a> | 
                 <a href="/selfemploymenttax">expatriates &amp; the self-employment tax</a> | 
-                <a href="/timestable/timestable.htm">multiplication table</a> | 
-                <a href="/fuel/fuel.htm">eur/liter to usd/gallon conversion</a> | 
-                <a href="/pizza/pizza.htm">pizza real estate calculator</a> | 
+                <a href="/timestable">multiplication table</a> | 
+                <a href="/fuel">eur/liter to usd/gallon conversion</a> | 
+                <a href="/pizza">pizza real estate calculator</a> | 
                 <a href="https://www.linkedin.com/in/timothyausten">linkedin</a>
             </div>
         </section>
