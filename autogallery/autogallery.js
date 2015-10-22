@@ -67,12 +67,17 @@ function EstimatedHeight(galleryContainer) {
         gallery = $('#' + galleryContainer),
         galleryH = gallery.height() < 0 ? 0 : gallery.height();
     this.galleryH = galleryH;
-    this.docHeight = Math.max(
+    
+    console.log('body.clientHeight: ' + body.clientHeight);
+    console.log('body.scrollHeight: ' + body.scrollHeight);
+    console.log('body.offsetHeight: ' + body.offsetHeight);
+    console.log('html.clientHeight: ' + html.clientHeight);
+    console.log('html.scrollHeight: ' + html.scrollHeight);
+    console.log('html.offsetHeight: ' + html.offsetHeight);
+
+    this.docHeight = Math.min(
         body.scrollHeight,
-        body.offsetHeight,
-        html.clientHeight,
-        html.scrollHeight,
-        html.offsetHeight
+        html.scrollHeight
     );
     this.viewportWidth = Math.max(html.clientWidth, window.innerWidth || 0);
     this.viewportHeight = Math.max(html.clientHeight, window.innerHeight || 0);
@@ -82,7 +87,7 @@ function EstimatedHeight(galleryContainer) {
     if (this.estimatedMaxheight < this.minH) {
         this.estimatedMaxheight = this.minH;
     }*/
-
+    
     this.resize = gallery.css({'height': this.estimatedMaxheight * 100 + '%'});
 
     // Make some test text
@@ -156,6 +161,7 @@ function autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidt
     viewportHeight = dimensions.viewportHeight;
     estimatedMaxheight = dimensions.estimatedMaxheight;
     console.log('docHeight: ' + docHeight);
+    console.log('estimatedmaxheight: ' + estimatedMaxheight);
 
     maxwidth         = (typeof maxwidth         === 'undefined') ? 0.8 : maxwidth;
     maxheight        = (typeof maxheight        === 'undefined') ? estimatedMaxheight : maxheight;
@@ -188,9 +194,12 @@ function autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidt
         });
         $('#' + galleryContainer).css({
             'width': '100%',
+            'height': dimensions.estimatedMaxheight * 100 + '%',
             'margin': '0 auto',
             'padding': '0'
         });
+        
+        console.log('dimensions.estimatedMaxheight: ' + dimensions.estimatedMaxheight);
     
         galleryDivs =
             '<div id="fullscreenBackground"></div>' +
@@ -199,6 +208,12 @@ function autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidt
         $('#' + galleryContainer).append(galleryDivs);
 
         $('#fullscreenButton').css(fullscreenButtonVar);
+        
+
+        //resize doc, then do it again, then do it again.
+
+        // dimensions.resize;
+
     });
 
     $.ajax({
@@ -294,11 +309,7 @@ function autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidt
             };
 
             // bookmark
-            setTimeout(function() {
-                dimensions = new EstimatedHeight(galleryContainer);
-                dimensions.resize;
-            }, 1000);
-        }    
+        }
     });
 
     // Manage fullscreen mode
