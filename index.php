@@ -37,6 +37,7 @@
                 <a href="/timestable">multiplication table</a> | 
                 <a href="/fuel">eur/liter to usd/gallon conversion</a> | 
                 <a href="/pizza">pizza real estate calculator</a> | 
+                <a href="/elvis">elvis</a> | 
                 <a href="https://www.linkedin.com/in/timothyausten">linkedin</a>
             </div>
         </section>

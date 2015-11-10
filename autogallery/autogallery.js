@@ -65,7 +65,20 @@ function EstimatedHeight(galleryContainer) {
         body = document.body,
         html = document.documentElement,
         gallery = $('#' + galleryContainer),
-        galleryH = gallery.height() < 0 ? 0 : gallery.height();
+        galleryH = gallery.height() < 0 ? 0 : gallery.height(),
+        bodyHeight = Math.min(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+        ),
+        viewportHeight = Math.max(html.clientHeight, window.innerHeight || 0);
+    
+    // Set the gallery height initially to something
+    // excessively large to avoid the problem where
+    // if body is smaller than viewport,
+    // then viewport size is returned. http://stackoverflow.com/a/14036545
+    gallery.css('height', '10000px');
+
+    
     this.galleryH = galleryH;
     
     console.log('body.clientHeight: ' + body.clientHeight);
@@ -75,14 +88,51 @@ function EstimatedHeight(galleryContainer) {
     console.log('html.scrollHeight: ' + html.scrollHeight);
     console.log('html.offsetHeight: ' + html.offsetHeight);
 
-    this.docHeight = Math.min(
-        body.scrollHeight,
-        html.scrollHeight
-    );
+    // ---
+    
+    // if body is smaller than viewport, then the viewport size is returned. http://stackoverflow.com/a/14036545
+    
+    console.log('header, gallery, and footer');
+    console.log(document.getElementsByTagName('header')[0].scrollHeight);
+    console.log(document.getElementById('galleryId').scrollHeight);
+    console.log(document.getElementsByTagName('section')[0].scrollHeight);
+
+    console.log('header + gallery + footer');
+    console.log(document.getElementById('galleryId').scrollHeight + document.getElementsByTagName('header')[0].scrollHeight + document.getElementsByTagName('section')[0].scrollHeight);
+
+    console.log('body');
+    console.log(document.body.scrollHeight);
+    console.log('body with jQuery');
+    console.log($(document).height());
+    
+    console.log('viewport: window.innerHeight & document.documentElement.clientHeight');
+    console.log(window.innerHeight);
+    console.log(document.documentElement.clientHeight);
+
+
+    
+    
+    
+    // Viewport dimensions:
+    // window.innerHeight
+    // document.documentElement.clientHeight
+
+    // Element dimensions
+    // .scrollHeight
+
+    // Other dimensions
+    // Gives viewport size + scrollbars
+    // .offsetHeight
+
+
+    
+    // ---
+    
+    this.docHeight = bodyHeight;
     this.viewportWidth = Math.max(html.clientWidth, window.innerWidth || 0);
-    this.viewportHeight = Math.max(html.clientHeight, window.innerHeight || 0);
+    this.viewportHeight = viewportHeight;
     //  this.estimatedMaxheight = (1 + (galleryH - this.docHeight) / this.viewportHeight).round(2);
-    this.estimatedMaxheight = (1 - (this.docHeight - galleryH) / this.viewportHeight).round(2);
+    this.estimatedMaxheight = (1 - (bodyHeight - galleryH) / viewportHeight).round(2);
     /*this.minH = 0.2;
     if (this.estimatedMaxheight < this.minH) {
         this.estimatedMaxheight = this.minH;
