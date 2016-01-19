@@ -21,11 +21,11 @@ function getFileList($dir) {
 <script>
     //<![CDATA[
     //
-    var fileListPhp = '<?php $dirlist = getFileList("./paintings/autogallery"); print json_encode($dirlist); ?>';
+    var fileListPhp = '<?php $dirlist = getFileList("./accountingpics"); print json_encode($dirlist); ?>';
     fileListPhp = JSON.parse(fileListPhp);
 
     function txtEl() {
-        var txt = '<?php $dirlist = getFileList("./paintings/autogallery"); print json_encode($dirlist); ?>',
+        var txt = '<?php $dirlist = getFileList("./accountingpics"); print json_encode($dirlist); ?>',
             el = document.createElement('p');
         el.innerHTML = txt;
         document.body.appendChild(el);

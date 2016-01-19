@@ -31,17 +31,16 @@ $(function () {
 */
 
 
-//launch autogallery
-$(function () {
-    console.log(fileListPhp);
-    // var fileList = fileListPhp;
-    var fileList = undefined;
+// Launch autogallery
+(function () {
+    var fileList = fileListPhp;
+    // var fileList; // Use default
     var dir = 'accountingpics/';
-    var fileextension = '.jpg';
-    var galleryContainer = 'galleryId';
-    var maxwidth;
-    var maxheight;
+    var fileextension; // Use default
+    var galleryContainer; // Use default
+    var maxwidth; // Use default
+    var maxheight; // Use default
     autogalleryfunc(fileList, dir, fileextension, galleryContainer, maxwidth, maxheight);
-});
+}());
 
 
