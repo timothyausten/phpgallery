@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Timothy Austen Expatriate Taxation</title>
+        <title>Timothy Austen: Front-End Developer</title>
         <meta name=description content="Front-end developer">
         <meta name=keywords content="timothy austen, painting, illustration, web development, front-end developer, graphic design">
         <meta name="revisit after" content="15 days">
